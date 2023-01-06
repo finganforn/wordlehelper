@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/wordBox"
+        android:layout_width="211dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginRight="107dp"
+        android:hint="currentWord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/unusedLetters"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="20dp"
+        android:hint="unused letters"
+        app:layout_constraintBottom_toTopOf="@+id/resetLetters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wordBox" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/wrongPos"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="30dp"
+        android:hint="wrongPositions"
+        app:layout_constraintBottom_toTopOf="@+id/wildCards"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/wildCards"
+        android:layout_width="370dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="26dp"
+        android:hint="wildCards"
+        app:layout_constraintBottom_toTopOf="@+id/goBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/goBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="179dp"
+        android:layout_marginRight="179dp"
+        android:layout_marginBottom="189dp"
+        android:text="Go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/resetLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginBottom="66dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@+id/wrongPos"
+        app:layout_constraintEnd_toStartOf="@+id/clearLetters" />
+
+    <Button
+        android:id="@+id/someLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="67dp"
+        android:text="Some"
+        app:layout_constraintBottom_toTopOf="@+id/wrongPos"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/clearLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="67dp"
+        android:layout_marginBottom="66dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toTopOf="@+id/wrongPos"
+        app:layout_constraintEnd_toStartOf="@+id/someLetters" />
+</androidx.constraintlayout.widget.ConstraintLayout>
